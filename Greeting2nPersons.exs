@@ -39,7 +39,7 @@ defmodule Parent do
       send pid, {:greet, greet, self()}
       receive do
         {:res, res, child} ->
-           IO.inspect child, label: res
+           IO.inspect child, label: "Responce " <> res
       end
       IO.puts "\n next \n"
       speak(greet,pids)
